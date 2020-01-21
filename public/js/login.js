@@ -23,3 +23,18 @@ let login = async (email, password) => {
         document.querySelector('#submit').textContent = 'Login'
     })
     }
+
+    let logout = async () => {
+        try {
+            await axios({
+                method: 'GET',
+                url: 'http://localhost:4200/logout',
+            })
+            setTimeout(() => location.assign('/'), 1000)
+        } catch (e) {
+            console.log(e)
+        }
+    }
+    
+let logoutBtn = document.querySelector('.class_is')
+if(logoutBtn) logoutBtn.addEventListener('click', logout)

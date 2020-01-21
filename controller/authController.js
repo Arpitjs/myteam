@@ -32,6 +32,17 @@ exports.login = catchAsync(async(req, res, next) => {
     sendToken(user, 200, res)
 })
 
+exports.logout = async(req, res, next) => {
+    try {
+       await res.clearCookie('jwt')
+       res.redirect('/')
+
+    } catch (e) {
+        console.log('couldnt clear it')
+    }
+    res.status(200).json()
+}
+
 exports.protect = async (req, res, next) => {
     let token
     if(req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
