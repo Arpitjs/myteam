@@ -4,17 +4,23 @@ header.trasparent_nav
       a(href='#')
         //- img(src='/img/logo.png' alt='Fertile')
     nav
-      ul
-        li
-          a(href='#') Our Story
-        li
-          a(href='#') Products
-        li
-          a(href='programs') Programs
-        li
-          a(href='#') Contact
-        li
-          a(href='login') Admin Pannel
+        ul
+          li
+            a(href='#') Our Story
+          li
+            a(href='#') Products
+          li
+            a(href='programs') Programs
+          li
+            a(href='#') Contact
+          li
+            a(href='login') Admin Pannel
+          if user 
+            li
+              a(href='logout') Logout
+
+     
+          
 // End trasparent_nav
 header.fixed_nav
   .wrapper

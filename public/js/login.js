@@ -12,13 +12,14 @@ let login = async (email, password) => {
         console.log('err')
     } }
 
-    if (document.querySelector('#myform'))
+    if (document.querySelector('#myform')) {
     console.log('here we ares')
     document.querySelector('#myform').addEventListener('submit', e => {
-        document.querySelector('.login100-form-btn').textContent = 'Logging in...'
         e.preventDefault()
+        document.querySelector('#submit').textContent = 'Logging in...'
         let email = document.querySelector('#email').value
         let password = document.querySelector('#password').value
         login(email, password)
-        document.querySelector('.login100-form-btn').textContent = 'Login'
+        document.querySelector('#submit').textContent = 'Login'
     })
+    }
