@@ -1,0 +1,65 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  title Cards Gallery
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css')
+  link(rel='stylesheet' href='/css/cards-gallery.css')
+section.gallery-block.cards-gallery
+  .container
+    .heading
+      h2 Cards Gallery
+    .row
+      .col-md-6.col-lg-4
+        .card.border-0.transform-on-hover
+          a.lightbox(href='image1.jpg')
+            img.card-img-top(src='/imagesGall/image1.jpg' alt='Card Image')
+          .card-body
+            h6
+              a(href='#') Lorem Ipsum
+            p.text-muted.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.
+      .col-md-6.col-lg-4
+        .card.border-0.transform-on-hover
+          a.lightbox(href='../img/image2.jpg')
+            img.card-img-top(src='/imagesGall/image2.jpg' alt='Card Image')
+          .card-body
+            h6
+              a(href='#') Lorem Ipsum
+            p.text-muted.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.
+      .col-md-6.col-lg-4
+        .card.border-0.transform-on-hover
+          a.lightbox(href='../img/image3.jpg')
+            img.card-img-top(src='/imagesGall/image3.jpg' alt='Card Image')
+          .card-body
+            h6
+              a(href='#') Lorem Ipsum
+            p.text-muted.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.
+      .col-md-6.col-lg-4
+        .card.border-0.transform-on-hover
+          a.lightbox(href='../img/image4.jpg')
+            img.card-img-top(src='/imagesGall/image4.jpg' alt='Card Image')
+          .card-body
+            h6
+              a(href='#') Lorem Ipsum
+            p.text-muted.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.
+      .col-md-6.col-lg-4
+        .card.border-0.transform-on-hover
+          a.lightbox(href='../img/image5.jpg')
+            img.card-img-top(src='/imagesGall/image5.jpg' alt='Card Image')
+          .card-body
+            h6
+              a(href='#') Lorem Ipsum
+            p.text-muted.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.
+      .col-md-6.col-lg-4
+        .card.border-0.transform-on-hover
+          a.lightbox(href='../img/image6.jpg')
+            img.card-img-top(src='/imagesGall/image6.jpg' alt='Card Image')
+          .card-body
+            h6
+              a(href='#') Lorem Ipsum
+            p.text-muted.card-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna.
+script(src='https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js')
+script.
+  baguetteBox.run('.cards-gallery', { animation: 'slideIn'});
