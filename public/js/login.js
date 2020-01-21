@@ -30,7 +30,6 @@ let login = async (email, password) => {
                 method: 'GET',
                 url: 'http://localhost:4200/logout',
             })
-            setTimeout(() => location.assign('/'), 1000)
         } catch (e) {
             console.log(e)
         }

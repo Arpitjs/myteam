@@ -4,24 +4,24 @@ header.trasparent_nav
       a(href='#')
         //- img(src='/img/logo.png' alt='Fertile')
     nav
-        ul
+      ul
+        li
+          a(href='#') Our Story
+        li
+          a(href='#') Products
+        li
+          a(href='programs') Programs
+        li
+          a(href='#') Contact
+        - if (!user)
+          li(class='side-nav--active')
+            a(href='login') Admin Pannel 
+        if user 
           li
-            a(href='#') Our Story
-          li
-            a(href='#') Products
-          li
-            a(href='programs') Programs
-          li
-            a(href='#') Contact
-          - if (!user)
-            li(class='side-nav--active')
-              a(href='login') Admin Pannel 
-          if user 
-            li
-              a.c(href='logout') Logout
+            a.c(href='logout') Logout
 
-     
-          
+
+
 // End trasparent_nav
 header.fixed_nav
   .wrapper
@@ -35,6 +35,12 @@ header.fixed_nav
         li
           a(href='#') Products
         li
-          a(href='#') Journal
+          a(href='programs') Programs
         li
           a(href='#') Contact
+        - if (!user)
+          li(class='side-nav--active')
+            a(href='login') Admin Pannel 
+        if user 
+          li
+            a.c(href='logout') Logout
