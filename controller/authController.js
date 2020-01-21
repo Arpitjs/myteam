@@ -9,7 +9,13 @@ let signToken = id =>  jwt.sign({id}, jwtSecret)
 let sendToken = (user, statusCode, res) => {
     let token = signToken(user._id)
     res.cookie('jwt', token)
-    res.status(statusCode).json({ token, user })
+    res.status(statusCode).json({
+        status: 'success',
+        token,
+        data: {
+            user
+        }
+    })
 }
 
 exports.signUp = catchAsync(async (req, res, next) => {

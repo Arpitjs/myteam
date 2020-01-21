@@ -5,22 +5,24 @@ let login = async (email, password) => {
             url: 'http://localhost:4200/login',
             data: { email, password }
         })
-        window.setTimeout(() => location.assign('/'), 1000)
         console.log(res)
+        if(res.data.status === 'success') { window.setTimeout(() => location.assign('/'), 1000) 
+    }
     }
     catch (err) { 
-        console.log('err')
+        alert('invalid username or password!')
     } }
 
     if (document.querySelector('#myform')) {
     console.log('here we ares')
-    document.querySelector('#myform').addEventListener('submit', e => {
+    document.querySelector('#myform').addEventListener('submit', async e => {
         e.preventDefault()
-        document.querySelector('#submit').textContent = 'Logging in...'
+        document.querySelector('.arpits').textContent = 'Logging in...'
         let email = document.querySelector('#email').value
         let password = document.querySelector('#password').value
-        login(email, password)
-        document.querySelector('#submit').textContent = 'Login'
+        await login(email, password)
+        document.querySelector('.arpits').textContent = 'Login'
+        
     })
     }
 
