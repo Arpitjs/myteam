@@ -13,8 +13,9 @@ header.trasparent_nav
             a(href='programs') Programs
           li
             a(href='#') Contact
-          li
-            a(href='login') Admin Pannel
+          - if (!user)
+            li(class='side-nav--active')
+              a(href='login') Admin Pannel 
           if user 
             li
               a(href='logout') Logout
